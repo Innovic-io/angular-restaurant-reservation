@@ -1,0 +1,8 @@
+<label>Meal Preferences</label>
+<select class="form-control"  id="power"
+        required
+         name="power">
+  <option *ngFor="let meal of mealPreferences" [value]="meal">{{meal}}</option>
+</select>
+<br>
+<br>
