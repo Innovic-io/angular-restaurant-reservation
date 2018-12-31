@@ -1,0 +1,30 @@
+<div class="label-flex">
+  <label for="payment">Payment mode</label>
+  <a href="#" class="form-link">Payment Detail</a>
+</div>
+<!--<div class="form-radio-group">
+  <div class="form-radio-item">
+    <input type="radio" name="payment" id="cash" checked="">
+    <label for="cash">Cash</label>
+    <span class="check"></span>
+  </div>
+  <div class="form-radio-item">
+    <input type="radio" name="payment" id="cheque">
+    <label for="cheque">Cheque</label>
+    <span class="check"></span>
+  </div>
+</div>-->
+<div class="form-radio-group">
+  <div class="form-radio-item" *ngFor="let mode of paymentMode" (click)="funcConLog($event)">
+    <input type="radio" name="payment" id="{{mode.name}}">
+    <label for="{{mode.name}}">{{mode.name}}</label>
+    <span class="check"></span>
+  </div>
+
+  <!--  <span *ngFor="let mode of paymentMode" (click)="funcConLog($event)">
+    <input type="radio" name="paymentMode" value="{{mode.name}}">
+    <label>{{mode.name}}</label>
+  </span>-->
+</div>
+
+

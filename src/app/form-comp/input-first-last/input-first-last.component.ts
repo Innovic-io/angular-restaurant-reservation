@@ -10,11 +10,20 @@ export class InputFirstLastComponent implements OnInit {
 
   @Input() name: string;
   @Input() id: string;
+  @Input() required: boolean;
+
+  show = true;
 
   constructor() {
+
   }
 
   ngOnInit() {
   }
+
+/*  down() {
+    console.log(this.show);
+    this.show = !this.show;
+  }*/
 
 }

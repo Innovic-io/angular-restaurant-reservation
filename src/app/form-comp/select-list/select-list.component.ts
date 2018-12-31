@@ -9,9 +9,12 @@ import {MealPreferences} from '../../MealPreferences';
 })
 export class SelectListComponent implements OnInit {
 
+  testValue = 1;
+
   mealPreferences = MealPreferences;
 
   constructor() {
+
   }
 
   ngOnInit() {

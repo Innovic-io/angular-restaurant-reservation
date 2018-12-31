@@ -1,4 +1,18 @@
-<label for={{id}}>{{name}}</label>
-<input type="text" class="form-control" id="{{id}}" required>
+<div class="form-input">
+  <div *ngIf="required">
+    <label for="{{id}}" class="required">{{name}}</label>
+    <input id="{{id}}" type="text" required>
+  </div>
+
+  <div *ngIf="!required">
+    <label for="req+{{id}}">{{name}}</label>
+    <input id="req+{{id}}" type="text" class="form-control">
+  </div>
+</div>
+
+
+<!--<button (click)="down()">{{show ? 'hide' : 'show'}} </button>
+show = {{show}}
 <br>
-<br>
+<div *ngIf="show; else elseBlock">Text to show</div>
+<ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>-->

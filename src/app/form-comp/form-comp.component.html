@@ -1,13 +1,55 @@
-<form>
-  <div>
-    <app-input-first-last [id]="'first-name'" [name]="'First Name'"></app-input-first-last>
-    <app-input-first-last [id]="'last-name'" [name]="'Last Name'"></app-input-first-last>
-    <app-input-first-last [id]="'company'" [name]="'Company'"></app-input-first-last>
-    <app-input-first-last [id]="'email'" [name]="'E-mail'"></app-input-first-last>
-  </div>
-  <div>
-    <app-select-list></app-select-list>
-  </div>
-<button type="submit">Submit</button>
-</form>
+<div class="form-row">
+  <form>
+    <div class="form-group">
+      <app-input-first-last [id]="'first-name'"
+                            [name]="'First Name'"
+                            [required]="true">
+      </app-input-first-last>
+      <app-input-first-last [id]="'last-name'"
+                            [name]="'Last Name'"
+                            [required]="true">
+      </app-input-first-last>
+      <app-input-first-last [id]="'company'"
+                            [name]="'Company'"
+                            [required]="true">
+      </app-input-first-last>
+      <app-input-first-last [id]="'email'"
+                            [name]="'E-mail'"
+                            [required]="true">
+      </app-input-first-last>
+      <app-input-first-last [id]="'phone'"
+                            [name]="'Phone number'"
+                            [required]="true">
+      </app-input-first-last>
+    </div>
+    <div class="form-group">
+      <app-select-list></app-select-list>
+      <app-check></app-check>
 
+      <app-input-first-last [id]="'ddChequeNo'"
+                            [name]="'DD / CHEQUE NO.'"
+                            [required]="false">
+      </app-input-first-last>
+
+
+      <app-input-first-last [id]="'dawnOn'"
+                            [name]="'DRAWN ON ( BANK NAME)'"
+                            [required]="false">
+      </app-input-first-last>
+
+
+      <app-input-first-last [id]="'playbleAt'"
+                            [name]="'PAYABLE AT'"
+                            [required]="false">
+      </app-input-first-last>
+
+    </div>
+
+    <app-donate-us></app-donate-us>
+    <app-submit></app-submit>
+
+
+  </form>
+
+
+</div>

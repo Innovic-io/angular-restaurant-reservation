@@ -1,1 +1,1 @@
-export const MealPreferences: string[] = ['Vegetarian', 'Kosher', 'Aaian Vegetarian'];
+export const MealPreferences: string[] = ['Vegetarian', 'Kosher', 'Asian Vegetarian'];
