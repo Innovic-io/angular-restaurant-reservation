@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Options} from 'ng5-slider';
 
 @Component({
   selector: 'app-donate-us',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonateUsComponent implements OnInit {
 
-  constructor() { }
+  value = 500;
+  options: Options = {
+    floor: 0,
+    ceil: 1000,
+    step: 10
+  };
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
