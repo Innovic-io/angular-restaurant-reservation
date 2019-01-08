@@ -1,0 +1,52 @@
+<html>
+<div class="container">
+  <div class="content_container">
+    <div class="img_container">
+      <img src="../assets/img/form-img.jpg"
+           style="height: 942px; ">
+      <div class="textImage">
+        <h2>{{"Register now"|uppercase}}</h2>
+        <p>while seats are available !</p>
+      </div>
+    </div>
+    <div class="form_container">
+
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <app-input (name)="getComponentGroupName($event)"
+                   [inputComponentName]="'firstName'"
+                   [label]="'First name'"
+                   [formChild]="profileForm">
+        </app-input>
+        <app-input (name)="getComponentGroupName($event)"
+                   [inputComponentName]="'lastName'"
+                   [label]="'Last name'"
+                   [formChild]="profileForm">
+        </app-input>
+        <app-input (name)="getComponentGroupName($event)"
+                   [inputComponentName]="'company'"
+                   [label]="'First name'"
+                   [formChild]="profileForm">
+        </app-input>
+        <app-input (name)="getComponentGroupName($event)"
+                   [inputComponentName]="'email'"
+                   [label]="'Email'"
+                   [formChild]="profileForm">
+        </app-input>
+        <app-input (name)="getComponentGroupName($event)"
+                   [inputComponentName]="'phoneNumber'"
+                   [label]="'Phone number'"
+                   [formChild]="profileForm">
+        </app-input>
+        <p>{{profileForm.get('firstName').value}}</p>
+
+        <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+      </form>
+      <p>
+        {{profileForm.status}}
+      </p>
+
+
+    </div>
+  </div>
+</div>
+</html>

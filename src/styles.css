@@ -1,3 +1,5 @@
+/*
+
 a:focus, a:active {
   text-decoration: none;
   outline: none;
@@ -8,20 +10,20 @@ a:focus, a:active {
   -ms-transition: all 300ms ease 0s;
 }
 
-/* @extend display-flex; */
+!* @extend display-flex; *!
 display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
   display: flex;
   display: -webkit-flex;
 }
 
-/* @extend list-type-ulli; */
+!* @extend list-type-ulli; *!
 list-type-ulli, ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* poppins-300 - latin */
+!* poppins-300 - latin *!
 
 input, select, textarea {
   outline: none;
@@ -617,7 +619,7 @@ input.error {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+!*# sourceMappingURL=style.css.map *!
 
 
 .custom-slider .ng5-slider .ng5-slider-bar {
@@ -632,7 +634,7 @@ input.error {
 .custom-slider .ng5-slider .ng5-slider-pointer {
   width: 100px;
   height: 36px;
-  /*top: auto;*/
+  !*top: auto;*!
   bottom: 0;
   background-color: green;
   border-radius: 10px;
@@ -674,4 +676,66 @@ span {
 
 .ng5-slider .ng5-slider-bubble.ng5-slider-limit {
   color: transparent !important;
+}
+
+
+
+
+
+*/
+
+body {
+  margin: 0px;
+}
+
+.container {
+  background-color: black;
+
+  position: absolute;
+  padding: 4%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.content_container {
+  background-color: royalblue;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  height: 942.162px;
+  width: 1400px;
+}
+
+.img_container {
+  background-color: red;
+  position: relative;
+  height: 100%;
+  width: 27%;
+  text-align: center;
+  float: left;
+}
+
+.form_container {
+  background-color: white;
+  position: relative;
+  height: 100%;
+  width: 73%;
+  float: right;
+}
+
+.textImage{
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 24%;
+  text-align: center;
+}
+
+.form-input, .form-select, .form-radio {
+  margin-bottom: 23px;
+}
+
+.form-input label, input {
+  display: block;
 }

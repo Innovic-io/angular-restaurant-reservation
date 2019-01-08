@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, ɵisDefaultChangeDetectionStrategy} from '@angular/core';
 import {Options} from 'ng5-slider';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-donate-us',
   templateUrl: './donate-us.component.html',
   styleUrls: ['./donate-us.component.css']

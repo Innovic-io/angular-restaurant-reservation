@@ -9,6 +9,8 @@ import { SelectListComponent } from './form-comp/select-list/select-list.compone
 import { CheckComponent } from './form-comp/check/check.component';
 import { DonateUsComponent } from './form-comp/donate-us/donate-us.component';
 import { SubmitComponent } from './submit/submit.component';
+import { InputComponent } from './form-comp/input/input.component';
+import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { SubmitComponent } from './submit/submit.component';
     SelectListComponent,
     CheckComponent,
     DonateUsComponent,
-    SubmitComponent
+    SubmitComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
