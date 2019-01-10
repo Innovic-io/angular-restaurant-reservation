@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
+import {MealPreferences} from '../MealPreferences';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
@@ -9,13 +10,18 @@ import {FormBuilder} from '@angular/forms';
 })
 export class FormCompComponent implements OnInit {
 
+
+
   profileForm = this.fb.group({
     firstName: ['test name'],
     lastName: ['last name'],
     company: ['company'],
     email: ['email'],
-    phoneNumber: ['phone number']
+    phoneNumber: ['phone number'],
+    mealPreference: [MealPreferences[0]],
+    paymentMode: []
   });
+
 
   componentGroupName: string;
 
@@ -23,12 +29,8 @@ export class FormCompComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('Form starting');
   }
 
-  changeFirstName() {
-    console.log(this.profileForm.get('firstName').value);
-  }
 
   PrintingOnConsole(data) {
     console.log(data);
@@ -36,7 +38,7 @@ export class FormCompComponent implements OnInit {
 
   getComponentGroupName(data) {
     this.componentGroupName = data;
-    console.log(data);
+    //console.log(data);
   }
 
   onSubmit() {

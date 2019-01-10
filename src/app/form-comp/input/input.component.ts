@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,22 +9,12 @@ import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 })
 export class InputComponent implements OnInit {
 
-  @Input() formChild: FormGroup;
-  @Input() inputComponentName: string;
+  @Input() control: FormControl;
   @Input() label;
-  @Output() name = new EventEmitter<string>();
 
+  constructor() {}
 
-  constructor(private _fb: FormBuilder) {
-
-  }
-
-  ngOnInit() {
-    this.name.emit(this.inputComponentName);
-
-
-  }
-
+  ngOnInit() {}
 
   printingValue(data) {
     console.log(data);

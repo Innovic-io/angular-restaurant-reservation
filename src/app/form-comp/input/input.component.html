@@ -1,8 +1,7 @@
-<div class="form-input" [formGroup]="formChild">
+<div class="form-input">
   <label>
     {{label}}
   </label>
-  <input type="text" formControlName="{{inputComponentName}}" >
-
+  <input type="text" [formControl]="control" >
 </div>
 

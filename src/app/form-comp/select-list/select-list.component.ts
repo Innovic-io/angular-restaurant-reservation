@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {MealPreferences} from '../../MealPreferences';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MealPreferences } from '../../MealPreferences';
+import { FormControl } from '@angular/forms';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,9 +10,10 @@ import {MealPreferences} from '../../MealPreferences';
 })
 export class SelectListComponent implements OnInit {
 
-  testValue = 1;
-
   mealPreferences = MealPreferences;
+
+  @Input() label: string;
+  @Input() control: FormControl;
 
   constructor() {
 
