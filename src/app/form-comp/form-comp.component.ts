@@ -13,12 +13,12 @@ export class FormCompComponent implements OnInit {
 
 
   profileForm = this.fb.group({
-    firstName: ['test name'],
-    lastName: ['last name'],
-    company: ['company'],
-    email: ['email'],
-    phoneNumber: ['phone number'],
-    mealPreference: [MealPreferences[0]],
+    firstName: [''],
+    lastName: [''],
+    company: [''],
+    email: [''],
+    phoneNumber: [''],
+    mealPreference: [''],
     paymentMode: []
   });
 
