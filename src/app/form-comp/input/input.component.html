@@ -3,5 +3,9 @@
     {{label}}
   </label>
   <input type="text" [formControlName]="controlName" >
+  <div
+          class="error"
+          *ngIf="required(controlName)">
+    {{ label }} is required!
+  </div>
 </div>
-

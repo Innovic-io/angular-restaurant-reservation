@@ -22,5 +22,11 @@ export class InputComponent implements OnInit {
     console.log(data);
   }
 
+  required(controlName) {
+
+    return this.formGroup.get(controlName).hasError('required')
+        && this.formGroup.get(controlName).touched;
+  }
+
 
 }

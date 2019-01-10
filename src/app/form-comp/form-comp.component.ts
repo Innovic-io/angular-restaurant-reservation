@@ -13,7 +13,7 @@ export class FormCompComponent implements OnInit {
 
 
   profileForm = this.fb.group({
-    firstName: [''],
+    firstName: ['', [Validators.required, Validators.minLength(5)]],
     lastName: [''],
     company: [''],
     email: [''],
