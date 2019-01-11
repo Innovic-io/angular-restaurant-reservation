@@ -809,7 +809,7 @@ input {
   background-color: #ebebeb;
   position: relative;
   float: right;
-  height: 100px;
+
   margin: 93px 80px 90px 0px;
 }
 
@@ -842,7 +842,6 @@ input {
 }
 
 
-
 input:focus {
   outline: none;
   border: 1px solid green;
@@ -852,3 +851,93 @@ input.error {
   border: 1px solid #c70000;
   color: black !important;
 }
+
+.label-flex {
+  justify-content: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+}
+
+.label-flex label {
+  width: auto;
+}
+
+.form-radio-group {
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -o-flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
+  display: flex;
+  display: -webkit-flex;
+}
+
+
+.form-radio-group {
+  padding-bottom: 10px;
+  padding-top: 12px;
+}
+
+input[type="radio" i] {
+  margin: 3px 3px 0px 5px;
+}
+
+.form-radio-item {
+  position: relative;
+  margin-right: 30px;
+}
+
+.form-radio-item label {
+  font-weight: 500;
+  padding-left: 30px;
+  position: relative;
+  z-index: 9;
+  display: block;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.form-radio-item {
+  margin-right: 15px;
+
+}
+
+display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
+  display: flex;
+  display: -webkit-flex;
+}
+
+
+/*Test class*/
+.form-radio-group1 {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 0 3em 0;
+}
+
+.form-radio-item1 {
+  margin: 0 1.81em 0 0;
+  position: relative;
+}
+.form-radio-item1 label {
+  font-weight: 500;
+  padding-left: 30px;
+  position: relative;
+  z-index: 9;
+  display: block;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.input-type-radio1{
+  position: absolute;
+}
+
+
+
