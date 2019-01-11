@@ -1,0 +1,28 @@
+<div class="form-select">
+  <div class="label-flex">
+    <label for="meal_preferences">Meal Preferences</label>
+    <a href="#" class="form-link">Lunch detail</a>
+  </div>
+  <div class="select-list">
+
+    <ul class="list-item" id="meal_preference" name="meal_preference">
+      <li value="Kocher" class="init">kocher</li>
+      <li value="Vegan" style="display: none">vegeterian</li>
+      <li value="Asian" style="display: none">asian</li>
+      <li *ngFor="let meal of mealPreferences" id="{{meal}}" value="{{meal}}">{{meal}}</li>
+
+    </ul>
+
+    <!--
+        <select class="list-item" id="power"
+                required
+                name="power">
+          <option *ngFor="let meal of mealPreferences" [value]="meal">
+            {{meal}}
+          </option>
+        </select>
+    -->
+  </div>
+
+
+</div>
