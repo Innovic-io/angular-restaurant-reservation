@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,8 @@ export class InputComponent implements OnInit {
   @Input() controlName: string;
   @Input() label: string;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -25,8 +26,20 @@ export class InputComponent implements OnInit {
   required(controlName) {
 
     return this.formGroup.get(controlName).hasError('required')
-        && this.formGroup.get(controlName).touched;
+      && this.formGroup.get(controlName).touched;
   }
 
+  minMax(controlName) {
+    // console.log(this.formGroup.get(controlName).hasError('required'));
+    console.log(this.formGroup.get(controlName).errors);
+    return this.formGroup.get(controlName).hasError('minlength')
+      || this.formGroup.get(controlName).hasError('maxlength');
+
+  }
+
+  notEmail(controlName) {
+    //console.log('mail error');
+    return this.formGroup.get(controlName).hasError('email');
+  }
 
 }

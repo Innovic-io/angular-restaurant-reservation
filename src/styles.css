@@ -840,3 +840,15 @@ input {
   font-family: 'Poppins';
   width: 90%;
 }
+
+
+
+input:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+input.error {
+  border: 1px solid #c70000;
+  color: black !important;
+}

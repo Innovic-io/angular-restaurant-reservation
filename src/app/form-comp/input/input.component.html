@@ -2,10 +2,24 @@
   <label>
     {{label}}
   </label>
-  <input type="text" [formControlName]="controlName" >
+  <input type="text"
+         [formControlName]="controlName"
+         [ngClass]="{'error': minMax(controlName)||required(controlName) ||notEmail(controlName)}">
   <div
-          class="error"
-          *ngIf="required(controlName)">
+    class="error"
+    *ngIf="required(controlName)">
     {{ label }} is required!
   </div>
+
+  <div
+    class="error"
+    *ngIf="minMax(controlName)">
+    {{ label }} must be between 5 and 10 characters long!
+  </div>
+  <div
+    class="error"
+    *ngIf="notEmail(controlName)">
+    {{ label }} must be a valid email address
+  </div>
+
 </div>

@@ -1,7 +1,7 @@
 <div [formGroup]="formGroup">
   <label>{{label}}</label>
   <select [formControlName]="controlName" class="select-list">
-    <option value="">Please select</option>
+    <!--<option value="">Please select</option>-->
     <option *ngFor="let meal of mealPreferences" [value]="meal">{{meal}}</option>
   </select>
 </div>
