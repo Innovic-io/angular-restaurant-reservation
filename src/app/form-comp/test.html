@@ -15,16 +15,36 @@
         <p>while seats are available !</p>
       </div>
     </div>
+
     <div class="form_container">
+     <pre>
+        {{ profileForm.value | json }}
+        </pre>
       <div class="register-form">
         <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
           <div class="form-group1">
-            <app-input [control]="profileForm.get('firstName')" [label]="'First name'"></app-input>
-            <app-input [control]="profileForm.get('lastName')" [label]="'Last name'"></app-input>
-            <app-input [control]="profileForm.get('company')" [label]="'Company'"></app-input>
-            <app-input [control]="profileForm.get('email')" [label]="'Email'"></app-input>
-            <app-input [control]="profileForm.get('phoneNumber')" [label]="'Phone number'"></app-input>
-            {{ profileForm.get('firstName')?.value }}
+            <app-input [formGroup]="profileForm"
+                       [controlName]="'firstName'"
+                       [label]="'First name'"></app-input>
+
+            <app-input [formGroup]="profileForm"
+                       [controlName]="'lastName'"
+                       [label]="'Last name'"></app-input>
+
+
+            <app-input [formGroup]="profileForm"
+                       [controlName]="'company'"
+                       [label]="'Company'"></app-input>
+
+
+            <app-input [formGroup]="profileForm"
+                       [controlName]="'email'"
+                       [label]="'Email'"></app-input>
+
+
+            <app-input [formGroup]="profileForm"
+                       [controlName]="'phoneNumber'"
+                       [label]="'Phone number'"></app-input>
             <!--
             <app-input (name)="getComponentGroupName($event)"
                        [inputComponentName]="'lastName'"
@@ -50,7 +70,8 @@
           </div>
           <div class="form-group2">
             <app-select-list [label]="'Meal Preference'"
-                             [control]="profileForm.get('mealPreference')"></app-select-list>
+                             [formGroup]="profileForm"
+                             [controlName]="'mealPreference'"></app-select-list>
 
           </div>
 
@@ -60,7 +81,6 @@
             <button type="submit" [disabled]="!profileForm.valid">Submit</button>
           </div>
         </form>
-
 
       </div>
 

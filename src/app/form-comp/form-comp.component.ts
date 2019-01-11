@@ -1,6 +1,7 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
-import {MealPreferences} from '../MealPreferences';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { MealPreferences, meals } from '../MealPreferences';
+import { PhoneValidator } from '../../phone.validator';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
@@ -11,13 +12,12 @@ import {MealPreferences} from '../MealPreferences';
 export class FormCompComponent implements OnInit {
 
 
-
   profileForm = this.fb.group({
-    firstName: ['test name'],
-    lastName: ['last name'],
-    company: ['company'],
-    email: ['email'],
-    phoneNumber: ['phone number'],
+    firstName: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+    lastName: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+    company: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+    email: ['', [Validators.required, Validators.email]],
+    phoneNumber: ['', Validators.required],
     mealPreference: [MealPreferences[0]],
     paymentMode: []
   });
