@@ -22,6 +22,6 @@
 <div class="donate-us">
   <label>Donate us</label>
   <div class="custom-slider">
-    <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+    <ng5-slider (valueChange)="sendValue(value)" [(value)]="value" [options]="options"></ng5-slider>
   </div>
 </div>

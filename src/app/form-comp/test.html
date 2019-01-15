@@ -91,7 +91,7 @@
 
           </div>
           <div>
-            <app-donate-us></app-donate-us>
+            <app-donate-us (sliderValue)="getSliderValue($event)"></app-donate-us>
           </div>
           <!--          <div style="position: absolute; margin: 800px 0px 0px 800px" class="cl">
                       <button type="submit" [disabled]="!profileForm.valid">Submit</button>

@@ -12,6 +12,7 @@ import { forEach } from '@angular/router/src/utils/collection';
 })
 export class FormCompComponent implements OnInit {
 
+  sliderValue: number;
   paymentModeArray: any;
 
   profileForm = this.fb.group({
@@ -24,7 +25,8 @@ export class FormCompComponent implements OnInit {
     paymentMode: [1],
     ddChequeNo: [''],
     drawnOn: [''],
-    playableAt: ['']
+    playableAt: [''],
+    donateUs: [this.sliderValue]
   });
 
 
@@ -66,6 +68,7 @@ export class FormCompComponent implements OnInit {
     console.log('DD/CHEQUE NO.: ' + this.profileForm.get('ddChequeNo').value);
     console.log('DRAWN ON (BANK NAME): ' + this.profileForm.get('drawnOn').value);
     console.log('Playble at: ' + this.profileForm.get('playableAt').value);
+    console.log('Donate us: ' + this.sliderValue);
 
 
   }
@@ -85,6 +88,10 @@ export class FormCompComponent implements OnInit {
 
   resetForm() {
     this.profileForm.reset();
+  }
+
+  getSliderValue(data) {
+    this.sliderValue = data;
   }
 
 }

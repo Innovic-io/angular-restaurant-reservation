@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, OnInit, ɵisDefaultChangeDetectionStrategy} from '@angular/core';
-import {Options} from 'ng5-slider';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output, ɵisDefaultChangeDetectionStrategy } from '@angular/core';
+import { Options } from 'ng5-slider';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,6 +9,7 @@ import {Options} from 'ng5-slider';
 })
 export class DonateUsComponent implements OnInit {
 
+  @Output() sliderValue = new EventEmitter();
   value = 500;
   options: Options = {
     floor: 0,
@@ -20,6 +21,10 @@ export class DonateUsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  sendValue(data) {
+    this.sliderValue.emit(data);
   }
 
 }
