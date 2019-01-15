@@ -9,6 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class InputComponent implements OnInit {
 
+
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
   @Input() label: string;
@@ -41,5 +42,7 @@ export class InputComponent implements OnInit {
     //console.log('mail error');
     return this.formGroup.get(controlName).hasError('email');
   }
+
+
 
 }

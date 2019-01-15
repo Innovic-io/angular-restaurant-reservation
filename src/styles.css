@@ -692,11 +692,11 @@ body {
   font-family: 'Poppins';
   margin: 0px;
   background: #282828;
-  padding: 50px 0;
+  padding: 0;
 }
 
 .container {
-  background-color: black;
+  background-color: #222;
 
   position: absolute;
   padding: 4%;
@@ -801,16 +801,17 @@ input {
   position: relative;
   float: left;
   margin: 93px 0px 90px 80px;
+  z-index: 10;
 }
 
 .form-group2 {
   width: 42%;
   padding: 0 0px;
-  background-color: #ebebeb;
+  background-color: white;
   position: relative;
   float: right;
-
   margin: 93px 80px 90px 0px;
+  z-index: 10;
 }
 
 .donate-us {
@@ -941,3 +942,110 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
 
 
 
+
+.custom-slider .ng5-slider .ng5-slider-bar {
+  background: #ebebeb;
+  height: 5px;
+}
+
+.custom-slider .ng5-slider .ng5-slider-selection {
+  background: green;
+}
+
+.custom-slider .ng5-slider .ng5-slider-pointer {
+  width: 100px;
+  height: 36px;
+  outline:none;
+
+bottom: 0;
+  background-color: green;
+  border-radius: 10px;
+}
+
+
+.custom-slider .ng5-slider .ng5-slider-pointer:after {
+  display: none;
+}
+
+.custom-slider .ng5-slider .ng5-slider-bubble {
+  visibility: hidden;
+  bottom: -11px;
+  color: white;
+  z-index: 5;
+}
+
+.custom-slider .ng5-slider .ng5-slider-limit {
+  font-weight: bold;
+  color: orange;
+}
+
+.custom-slider .ng5-slider .ng5-slider-tick {
+  width: 1px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0;
+  background: #ffe4d1;
+  top: -1px;
+}
+
+.custom-slider .ng5-slider .ng5-slider-tick.ng5-slider-selected {
+  background: orange;
+}
+
+span {
+  visibility: visible;
+}
+
+.ng5-slider .ng5-slider-bubble.ng5-slider-limit {
+  color: transparent !important;
+}
+
+
+
+.form-submit {
+  text-align: right;
+  position: relative;
+  margin-right: 100px;
+}
+
+.submit {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-top: 80px;
+}
+
+#reset {
+  background: #fff;
+  color: #999;
+  border: 2px solid #ebebeb;
+}
+
+#reset:hover {
+  border: 2px solid #329e5e;
+  background: #329e5e;
+  color: #fff;
+}
+
+#submit {
+  background: #329e5e;
+  color: #fff;
+  margin-right: 25px;
+
+}
+
+#submit:hover {
+  background-color: #267747;
+}

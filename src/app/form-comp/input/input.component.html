@@ -4,7 +4,8 @@
   </label>
   <input type="text"
          [formControlName]="controlName"
-         [ngClass]="{'error': minMax(controlName)||required(controlName) ||notEmail(controlName)}">
+         [ngClass]="{'error': minMax(controlName)||required(controlName) ||notEmail(controlName)}"
+  >
   <div
     class="error"
     *ngIf="required(controlName)">

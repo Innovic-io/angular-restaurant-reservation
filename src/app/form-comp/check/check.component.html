@@ -1,5 +1,5 @@
 <div class="label-flex">
-  <label>Payment mode</label>
+  <label>{{label}}</label>
 </div>
 <!--<div class="form-radio-group">
   <div class="form-radio-item">
@@ -13,12 +13,14 @@
     <span class="check"></span>
   </div>
 </div>-->
-<div class="form-radio-group1">
-  <div class="form-radio-item1" *ngFor="let mode of paymentMode">
-    <input class="input-type-radio1" type="radio" name="payment" [id]="mode.name">
-    <label [for]="mode.name" class="label-radio">{{mode.name}}</label>
-
-
+<div class="form-radio-group" [formGroup]="formGroup">
+  <div class="form-radio-item" *ngFor="let mode of paymentMode">
+    <input type="radio" [formControlName]="controlName"
+           [value]="mode.id" [id]="mode.id"
+           (change)="sendLabelValue(mode.id)"
+           (change)="sendPaymentModeArray()">
+    <label [for]="mode.id" class="label-radio">{{mode.name}}</label>
+    <span class="check"></span>
   </div>
 
   <!--  <span *ngFor="let mode of paymentMode" (click)="funcConLog($event)">
