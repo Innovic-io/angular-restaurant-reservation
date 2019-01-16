@@ -819,7 +819,7 @@ input {
   width: 85%;
   background-color: white;
   position: absolute;
-  margin: 650px 0 0 80px;
+  margin: 670px 0 0 80px;
 
 }
 
@@ -926,6 +926,7 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
   margin: 0 1.81em 0 0;
   position: relative;
 }
+
 .form-radio-item1 label {
   font-weight: 500;
   padding-left: 30px;
@@ -936,11 +937,9 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
   text-transform: none;
 }
 
-.input-type-radio1{
+.input-type-radio1 {
   position: absolute;
 }
-
-
 
 
 .custom-slider .ng5-slider .ng5-slider-bar {
@@ -955,10 +954,10 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
 .custom-slider .ng5-slider .ng5-slider-pointer {
   width: 100px;
   height: 36px;
-  outline:none;
+  outline: none;
 
-bottom: 0;
-  background-color: green;
+  bottom: 0;
+  background-color: #329e5e;
   border-radius: 10px;
 }
 
@@ -1001,12 +1000,13 @@ span {
 }
 
 
-
 .form-submit {
   text-align: right;
   position: relative;
   margin-right: 100px;
 }
+
+
 
 .submit {
   width: 150px;
@@ -1024,7 +1024,10 @@ span {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
-  margin-top: 80px;
+  margin-top: 120px;
+  background: #329e5e;
+  color: #fff;
+  margin-right: 25px;
 }
 
 #reset {
@@ -1046,6 +1049,12 @@ span {
 
 }
 
-#submit:hover {
+.submit:hover {
   background-color: #267747;
 }
+
+.ng5-slider{
+  width: 94% !important;
+}
+
+

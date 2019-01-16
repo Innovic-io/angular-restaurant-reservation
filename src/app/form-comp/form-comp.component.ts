@@ -7,12 +7,12 @@ import { forEach } from '@angular/router/src/utils/collection';
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
   selector: 'app-form-comp',
-  templateUrl: './test.html',
+  templateUrl: './form-comp.component.html',
   styleUrls: ['./form-comp.component.css']
 })
 export class FormCompComponent implements OnInit {
 
-  sliderValue: number;
+
   paymentModeArray: any;
 
   profileForm = this.fb.group({
@@ -26,7 +26,7 @@ export class FormCompComponent implements OnInit {
     ddChequeNo: [''],
     drawnOn: [''],
     playableAt: [''],
-    donateUs: [this.sliderValue]
+    donateUs: [80]
   });
 
 
@@ -60,6 +60,9 @@ export class FormCompComponent implements OnInit {
     console.log('Phone number: ' + this.profileForm.get('phoneNumber').value);
     console.log('Meal preference: ' + this.profileForm.get('mealPreference').value);
     console.log('Payment mode id: ' + this.profileForm.get('paymentMode').value);
+
+    /* paymentMode kao vrijednost na konzolu ispisuje id, sljedeći dio koda prolazi kroz niz
+    paymentMode i nalazi odgovarajući name za taj id, te njega ispisuje*/
     for (const entry of this.paymentModeArray) {
       if (this.paymentModeSelectedValue === entry.id) {
         console.log('Payment mode: ' + entry.name);
@@ -68,7 +71,7 @@ export class FormCompComponent implements OnInit {
     console.log('DD/CHEQUE NO.: ' + this.profileForm.get('ddChequeNo').value);
     console.log('DRAWN ON (BANK NAME): ' + this.profileForm.get('drawnOn').value);
     console.log('Playble at: ' + this.profileForm.get('playableAt').value);
-    console.log('Donate us: ' + this.sliderValue);
+    console.log('Donate us: ' + this.profileForm.get('donateUs').value);
 
 
   }
@@ -88,10 +91,13 @@ export class FormCompComponent implements OnInit {
 
   resetForm() {
     this.profileForm.reset();
+
+    /*Pošto se cijela forma resetuje, potrebno je defaultne vrijednosti za kontrole
+    'paymentMode' i 'mealPreference' dodati ručno*/
+    this.profileForm.controls['paymentMode'].setValue(1);
+    this.profileForm.controls['mealPreference'].setValue(MealPreferences[0]);
+
   }
 
-  getSliderValue(data) {
-    this.sliderValue = data;
-  }
 
 }
